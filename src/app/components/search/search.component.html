@@ -1,6 +1,8 @@
-<p *ngFor="let item of datos.getPersonajes()">
-  <figure>
-    <img src="{{item.imagen}}" alt="">
-  </figure>
-  {{ item.nombre }}
-</p>
+<div class="card" style="width: 18rem;" *ngFor="let item of datos.getPersonajes()">
+  <img class="card-img-top" src="{{item.imagen}}" alt="{{item.nombre}}">
+  <div class="card-body">
+    <h5 class="card-title">{{item.nobre}}</h5>
+    <p class="card-text">{{item.description}}</p>
+    <a [routerLink]="[ '/detalle']" class="btn btn-primary">Ver detalles</a>
+  </div>
+</div>
