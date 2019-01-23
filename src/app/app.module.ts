@@ -8,7 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchResultComponent } from './components/search/search-result.component';
-import { ChavoService } from './services/chavo.service';
+import { PersonajesService } from './services/personajes.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { ChavoService } from './services/chavo.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ChavoService],
+  providers: [PersonajesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

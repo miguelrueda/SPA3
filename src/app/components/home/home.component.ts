@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ChavoService } from 'src/app/services/chavo.service';
 
 @Component({
   selector: 'app-home',

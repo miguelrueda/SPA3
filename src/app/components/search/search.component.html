@@ -1,8 +1,17 @@
-<div class="card" style="width: 18rem;" *ngFor="let item of datos.getPersonajes()">
-  <img class="card-img-top" src="{{item.imagen}}" alt="{{item.nombre}}">
-  <div class="card-body">
-    <h5 class="card-title">{{item.nobre}}</h5>
-    <p class="card-text">{{item.description}}</p>
-    <a [routerLink]="[ '/detalle']" class="btn btn-primary">Ver detalles</a>
+<div class="container mt-5">
+  <div class="card-columns" >
+    <div class="card" style="width: 18rem;" *ngFor="let item of datos.getPersonajes()" 
+        (click)="mostrarDetalle(item.id)">
+      <figure class="card-img">
+        <img class="card-img-top" src="{{item.imagen}}" alt="{{item.nombre}}">
+      </figure>
+      <div class="card-body">
+        <h5 class="card-title">{{item.nombre}}</h5>
+        <!-- <a [routerLink]="[ '/detalle']" class="btn btn-primary">Ver detalles</a> -->
+      </div>
+      <div class="card-footer text-muted">
+        Edad: {{item.edad}}
+      </div>
+    </div>
   </div>
 </div>

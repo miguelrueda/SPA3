@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { PersonajesService } from 'src/app/services/personajes.service';
+import { Personaje } from 'src/app/interfaces/personaje';
 
 @Component({
   selector: 'app-search-result',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResultComponent implements OnInit {
 
-  constructor() { }
+  personaje: Personaje;
+
+  constructor(private route: Router, private activatedRoute: ActivatedRoute,
+    private personajes: PersonajesService) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params =>
+      this.personaje = this.personajes.getPersonajePorId(+params['id'])
+    );
   }
 
 }
