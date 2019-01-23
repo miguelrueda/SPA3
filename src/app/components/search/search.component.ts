@@ -14,8 +14,6 @@ export class SearchComponent implements OnInit {
   constructor(private datos: PersonajesService, private router: Router) { }
 
   ngOnInit() {
-    const personaje: Personaje = this.datos.getPersonajePorId(2);
-    console.log(`=> ${personaje.nombre}`);
   }
 
   public mostrarDetalle(id: number) {

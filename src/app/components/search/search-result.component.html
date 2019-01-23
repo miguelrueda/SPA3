@@ -1,18 +1,13 @@
 <div class="container mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h1 class="display-4">{{personaje.nombre}}</h1>
-        <figure class="card-img">
-          <img class="card-img-top" src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
-        </figure>
-      </div>
-      <div class="col-sm">
-        <p class="lead">Edad: {{personaje.edad}}</p>
-        <p>{{personaje.descripcion}}</p>
-        <hr class="my-4">
-        <a [routerLink]="[ '/buscar']" class="btn btn-primary">Regresar</a>
-      </div>
-    </div>
+  <div class="jumbotron">
+    <h1 class="display-4">{{personaje.nombre}}</h1>
+    <figure class="card-img">
+      <img class="card-img-top" src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
+    </figure>
+    <p class="lead">{{personaje.descripcion}}</p>
+    <hr class="my-4">
+    <p>Edad: {{personaje.edad}}</p>
+    <a [routerLink]="[ '/buscar']" class="btn btn-secondary">Regresar</a>
   </div>
 </div>
+
