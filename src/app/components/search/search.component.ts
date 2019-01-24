@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonajesService } from 'src/app/services/personajes.service';
 import { Personaje } from 'src/app/interfaces/personaje';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
@@ -11,9 +11,23 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private datos: PersonajesService, private router: Router) { }
+  private personajes: Personaje[];
+
+  constructor(private datos: PersonajesService, private router: Router,
+    private activated: ActivatedRoute) { }
 
   ngOnInit() {
+
+      this.activated.queryParams.subscribe(params => {
+        if (params['search']) {
+          if (params['search'] !== '') {
+            this.personajes = this.datos.buscarPersonajes(params['search'].toLowerCase());
+          }
+        } else {
+          this.personajes = this.datos.getPersonajes();
+        }
+      });
+
   }
 
   public mostrarDetalle(id: number) {

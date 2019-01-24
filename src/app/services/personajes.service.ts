@@ -34,4 +34,8 @@ export class PersonajesService {
     return this.personajes.filter(x => x.id === id)[0];
   }
 
+  public buscarPersonajes(value: string): Personaje[] {
+    return this.personajes.filter(p => p.nombre.toLowerCase().includes(value));
+  }
+
 }
