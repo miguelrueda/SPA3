@@ -12,6 +12,7 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 export class SearchComponent implements OnInit {
 
   private personajes: Personaje[];
+  private termino = '';
 
   constructor(private datos: PersonajesService, private router: Router,
     private activated: ActivatedRoute) { }
@@ -21,13 +22,13 @@ export class SearchComponent implements OnInit {
       this.activated.queryParams.subscribe(params => {
         if (params['search']) {
           if (params['search'] !== '') {
-            this.personajes = this.datos.buscarPersonajes(params['search'].toLowerCase());
+            this.termino = params['search'];
+            this.personajes = this.datos.buscarPersonajes(this.termino.toLowerCase());
           }
         } else {
           this.personajes = this.datos.getPersonajes();
         }
       });
-
   }
 
   public mostrarDetalle(id: number) {

@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchResultComponent } from './components/search/search-result.component';
 import { PersonajesService } from './services/personajes.service';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PersonajesService } from './services/personajes.service';
     HomeComponent,
     SearchComponent,
     AboutComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

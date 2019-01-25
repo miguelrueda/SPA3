@@ -21,7 +21,9 @@ export class PersonajesService {
     { nombre: 'Ñoño', descripcion: 'Se encuentra a dieta desde los 8', edad: 12, imagen: '/assets/img/nono.png', id: 9 },
     { nombre: 'Paty', descripcion: 'El crush de todos', edad: 11, imagen: '/assets/img/paty.png', id: 10 },
     { nombre: 'Popis', descripcion: 'La fresa sin dinero', edad: 10, imagen: '/assets/img/popis.png', id: 11 },
-    { nombre: 'Quico', descripcion: 'Trabaja en ingenieria', edad: 13, imagen: '/assets/img/quico.png', id: 12 }
+    { nombre: 'Quico', descripcion: 'Trabaja en ingenieria', edad: 13, imagen: '/assets/img/quico.png', id: 12 },
+    { nombre: 'Chilindra', descripcion: 'Llora por todo', edad: 10, imagen: '/assets/img/chilindrina.png', id: 14 },
+    { nombre: 'Chaparro', descripcion: 'Solteron viejo lesbiano', edad: 50, imagen: '/assets/img/chaparron.jpg', id: 15 }
   ];
 
   constructor() { }
