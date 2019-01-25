@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;" (click)="mostrarDetalle(personaje.id)">
+  <figure class="card-img">
+    <img class="card-img-top" src="{{personaje.imagen}}" alt="{{personaje.nombre}}">
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title">{{personaje.nombre}}</h5>
+    <!-- <a [routerLink]="[ '/detalle']" class="btn btn-primary">Ver detalles</a> -->
+  </div>
+  <div class="card-footer text-muted">
+    Edad: {{personaje.edad}}
+  </div>
+</div>

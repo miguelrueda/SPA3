@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchResultComponent } from './components/search/search-result.component';
 import { PersonajesService } from './services/personajes.service';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     SearchComponent,
     AboutComponent,
     SearchResultComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,6 @@
 <div class="container mt-5">
   <div class="card-columns" *ngIf="personajes.length > 0">
-    <div class="card" style="width: 18rem;" *ngFor="let item of personajes" (click)="mostrarDetalle(item.id)">
-      <figure class="card-img">
-        <img class="card-img-top" src="{{item.imagen}}" alt="{{item.nombre}}">
-      </figure>
-      <div class="card-body">
-        <h5 class="card-title">{{item.nombre}}</h5>
-        <!-- <a [routerLink]="[ '/detalle']" class="btn btn-primary">Ver detalles</a> -->
-      </div>
-      <div class="card-footer text-muted">
-        Edad: {{item.edad}}
-      </div>
-    </div>
+    <app-card (personajeSeleccionado)="mostrarDetalle($event)" *ngFor="let item of personajes" [personaje]="item"></app-card>
   </div>
   <div class="alert alert-danger" role="alert" *ngIf="personajes.length == 0">
     No se encontraron resultados para: {{termino}}
