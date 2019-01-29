@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PersonajesService } from 'src/app/services/personajes.service';
 import { Personaje } from 'src/app/interfaces/personaje';
 import { Router, ActivatedRoute } from '@angular/router';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-search',
